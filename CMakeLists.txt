@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.19) 
 
-project(pwdgen)
+project(pwdgen
     VERSION 1.0.0
 )
 find_library(OPENSSL_CRYPTO_LIBRARY
@@ -30,6 +30,6 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED TRUE)
 target_include_directories(${PROJECT_NAME}
-    PUBLIC ${PROJECT_SOURCE_DIR}/headers
+    PUBLIC ${CMAKE_CURRENT_LIST_DIR}/headers
     PRIVATE ${OPENSSL_INCLUDE_DIR})
 target_link_libraries(${PROJECT_NAME} #[[OpenSSL::SSL]] ${OPENSSL_CRYPTO_LIBRARIES})
