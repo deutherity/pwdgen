@@ -2,8 +2,7 @@
 #include <cstdlib>
 #include <iostream>
 
-void crash(std::string msg)
-{
+void crash(std::string msg) {
     std::cerr << msg << std::endl;
     std::exit(1);
 }

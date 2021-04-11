@@ -2,11 +2,9 @@
 #define SALTHEAD
 
 #include "const_pwdgenlib.hpp"
-struct Salt
-{
-    uchar data [SALTLEN];
+struct Salt {
+    uchar data[SALTLEN];
 };
 
-void gensalt(Salt * out);
+void gensalt(Salt *out);
 #endif
-
