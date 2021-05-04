@@ -6,6 +6,7 @@ typedef RANDOM_ENGINE::result_type rint_t;   // random int type of RANDOM_ENGINE
 static constexpr size_t sz = sizeof(rint_t); // random int type size
 
 void gensalt(Salt *out) {
+    out->data = new uchar[out->saltlen];
     std::random_device seed;
     RANDOM_ENGINE rng(seed());
     RANDOM_ENGINE::result_type num;
