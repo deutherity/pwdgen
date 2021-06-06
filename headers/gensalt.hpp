@@ -1,5 +1,4 @@
-#ifndef SALTHEAD
-#define SALTHEAD
+#pragma once
 
 #include "const_pwdgenlib.hpp"
 struct Salt {
@@ -8,4 +7,3 @@ struct Salt {
 };
 
 void gensalt(Salt *out);
-#endif
