@@ -6,7 +6,6 @@
 #include <string_view>
 #include <vector>
 
-
 /*
 static const std::string_view alnums =
     "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
@@ -23,8 +22,8 @@ std::string genpw(const std::string_view &data, std::uint16_t retlen,
     genhash((uchar *)data.data(), data.length(), hash, retlen * 2, salt,
             saltlen);
     size_t i = 0;
-    size_t charset2howmany = std::min(addalphabet.length(), (std::size_t) retlen % 5);
-    for (; i < retlen - charset2howmany; ++i) {
+    size_t charset2howmany = std::min(addalphabet.length(), (std::size_t) retlen
+% 5); for (; i < retlen - charset2howmany; ++i) {
         shuffleVec.push_back(alnums[hash[i] % alnums.length()]);
     }
     for (; i < retlen; ++i) {
